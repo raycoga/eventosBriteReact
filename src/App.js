@@ -4,6 +4,7 @@ import EventsProvider from "./contextAPI/EventContext";
 
 import Form from "./components/Form";
 import Header from "./components/Header";
+import EventList from "./components/EventList";
 
 /*primer  comit*/
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <div className="uk-container">
           <Form />
+          <EventList />
         </div>
       </CategoryProvider>
     </EventsProvider>
