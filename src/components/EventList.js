@@ -1,5 +1,5 @@
 import React from "react";
-
+import Event from "./Event";
 import { Eventsconsumer } from "../contextAPI/EventContext";
 
 const EventList = () => {
@@ -8,7 +8,9 @@ const EventList = () => {
       {/* Donde sea que yo necesite los datos, como por ejemplo en este componente, yo necesito importar el Consumer del Context */}
       <Eventsconsumer>
         {value => {
-          return <p>Hola</p>;
+          return value.events.map(event => {
+            return(<Event key={event.id}  event={event}/>)
+          });
         }}
       </Eventsconsumer>
     </div>
